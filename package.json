@@ -1,0 +1,24 @@
+{
+  "name": "habitica-extension",
+  "version": "1.0.0",
+  "description": "The un-official browser extension for [Habitica](https://habitica.com).",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src/js -d lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carbonsam/habitica-extension.git"
+  },
+  "author": "Samuel Schumacher",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/carbonsam/habitica-extension/issues"
+  },
+  "homepage": "https://github.com/carbonsam/habitica-extension#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.5.1",
+    "babel-preset-es2015": "^6.24.1"
+  }
+}
