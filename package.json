@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "babel src/js -d package/js && npm run compile-html && npm run compile-css",
-    "compile-css": "node-sass --include-path scss src/scss/main.scss   package/css/main.css",
+    "compile-css": "node-sass --include-path scss src/scss/main.scss package/css/main.css --output-style compressed",
     "compile-html": "html-minifier --input-dir src --output-dir package --collapse-whitespace"
   },
   "repository": {
