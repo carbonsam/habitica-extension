@@ -1,6 +1,10 @@
 # Habitica Browser Extension
 The un-official browser extension for [Habitica](https://habitica.com).
 
+## Setup
+1. Run `npm install`.
+2. Run `npm run build` to build the minified Chrome package.
+
 ## Planned
 - View basic user info (profile pic, health, experience, etc.)
 - Earn gold and experience for spending time on productive websites (whitelist).
