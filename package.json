@@ -4,7 +4,9 @@
   "description": "The un-official browser extension for [Habitica](https://habitica.com).",
   "main": "index.js",
   "scripts": {
-    "build": "babel src/js -d lib"
+    "build": "babel src/js -d package/js && npm run compile-html && npm run compile-css",
+    "compile-css": "node-sass --include-path scss src/scss/main.scss   package/css/main.css",
+    "compile-html": "html-minifier --input-dir src --output-dir package --collapse-whitespace"
   },
   "repository": {
     "type": "git",
@@ -19,6 +21,8 @@
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-preset-env": "^1.5.1",
-    "babel-preset-es2015": "^6.24.1"
+    "babel-preset-es2015": "^6.24.1",
+    "node-sass": "^4.5.3",
+    "nodemon": "^1.11.0"
   }
 }
