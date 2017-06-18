@@ -8,7 +8,7 @@
     "lint-js": "jshint src/js -c .jshintrc",
     "minify-js": "uglifyjs package/js/*.js --compress --mangle --output package/js/*.js",
     "compile-js": "babel src/js -d package/js",
-    "compile-css": "node-sass src/scss/main.scss package/css/main.css --output-style compressed",
+    "compile-css": "node-sass src/scss/main.scss src/css/main.css --output-style compressed",
     "compile-html": "html-minifier --input-dir src --output-dir package --file-ext html --collapse-whitespace"
   },
   "repository": {

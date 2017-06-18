@@ -1,0 +1,80 @@
+.hero-info {
+  float: left;
+  width: 100%;
+  background-color: #bbb;
+
+  .left-panel {
+    float: left;
+    width: 40%;
+  }
+
+  .right-panel {
+    float: left;
+    width: 60%;
+  }
+
+  .wrapper {
+    padding: 5px;
+  }
+
+  img {
+    display: block;
+  }
+}
+
+.time-info {
+  float: left;
+  clear: both;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.action-bar {
+  width: 100%;
+  float: left;
+  clear: both;
+  padding: 10px 0;
+  text-align: center;
+  background-color: #bbb;
+
+  ul.links {
+    list-style: none;
+    width: 100%;
+    padding: 10px 0;
+
+    li {
+      display: inline-block;
+    }
+
+    li:first-child {
+      float: left;
+    }
+
+    li:last-child {
+      float: right;
+    }
+  }
+
+  button {
+    width: 100%;
+    height: 24px;
+  }
+}
+
+progress {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+
+  width: 100%;
+  height: 24px;
+
+  &.health::-webkit-progress-value {
+    background-color: #da5353;
+  }
+
+  &.experience::-webkit-progress-value {
+    background-color: #ffcc35;
+  }
+}

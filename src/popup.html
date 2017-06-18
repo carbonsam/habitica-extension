@@ -9,43 +9,37 @@
 <body>
   <div class="container">
 
-    <div class="user-info">
-      <div class="hero-image">
-        <img id="hero_image" alt="" />
+    <div class="hero-info">
+      <div class="left-panel">
+        <img id="hero_img" src="" alt=""/>
       </div>
 
-      <div class="hero-stats">
+      <div class="right-panel">
+        <div class="wrapper">
+          <progress id="hero_health_bar" class="health" max="50" value="0"></progress>
+          <div id="hero_health_txt"></div>
 
-        <div class="meter-label">
-          <span><i class="fa fa-heart icon" aria-hidden="true"></i></span>
-        </div>
-        <div class="meter health">
-          <div id="hero_health_bar" class="bar" style="width: 69%;"></div>
-          <span  id="hero_health_value" class="meter-text value">35 / 50</span>
-        </div>
+          <progress id="hero_experience_bar" class="experience"  max="100" value="0"></progress>
+          <div id="hero_experience_txt"></div>
 
-        <div class="meter-label">
-          <span><i class="fa fa-star icon" aria-hidden="true"></i></span>
+          <div id="hero_gold_txt"></div>
         </div>
-        <div class="meter experience">
-          <div id="hero_experience_bar" class="bar" style="width: 75%;"></div>
-          <span id="hero_experience_value" class="meter-text value">157 / 210</span>
-        </div>
-
-        <div class="other-stats">
-          <div class="level">
-            <span id="hero_level_value"></span>
-          </div>
-          <div class="gold">
-            <span class="gold-icon" id="hero_gold"></span>
-            <span class="gold-value" id="hero_gold_value"></span>
-          </div>
-        </div>
-
       </div>
     </div>
 
-    <div class="footer"></div>
+    <div class="time-info">
+      <h3>Free Time Left</h3>
+      <div id="time_left_txt">0 hours 0 minutes</div>
+    </div>
+
+    <div class="action-bar">
+      <button id="purchase_time_btn">50 gold - 15 minutes of free time</button>
+
+      <ul class="links">
+        <li><a href="#">Add Site</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
+    </div>
 
   </div>
 
