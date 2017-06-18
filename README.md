@@ -1,7 +1,7 @@
 # Habitica Browser Extension
 The un-official browser extension for [Habitica](https://habitica.com). Version 0.1.
 
-![popup](https://github.com/carbonsam/habitica-extension/screenshot.png)
+![popup](https://github.com/carbonsam/habitica-extension/raw/master/screenshot.png)
 
 ## Setup
 1. Run `npm install`.
