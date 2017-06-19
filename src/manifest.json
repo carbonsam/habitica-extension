@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "Habitica",
-  "description": "This  is the un-official Habitica browser extension",
+  "description": "This is the un-official Habitica browser extension",
   "version": "0.1",
 
   "browser_action": {
