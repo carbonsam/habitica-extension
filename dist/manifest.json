@@ -3,7 +3,7 @@
 
   "name": "Habitica",
   "description": "This  is the un-official Habitica browser extension",
-  "version": "0.1",
+  "version": "0.1.0",
 
   "browser_action": {
     "default_title": "Habitica",
@@ -11,7 +11,7 @@
     "default_popup": "popup.html"
   },
   "background": {
-    "scripts": ["js/background.js"]
+    "scripts": ["js/background-bundle.js"]
   },
   "options_ui": {
     "page": "options.html",
@@ -20,6 +20,7 @@
   "permissions": [
     "tabs",
     "storage",
+    "webNavigation",
     "https://ajax.googleapis.com/"
   ]
 }
