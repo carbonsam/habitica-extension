@@ -1,0 +1,35 @@
+body.options-page {
+  padding: 10px;
+
+  p {
+    margin: 0;
+  }
+
+  label {
+    font-weight: bold;
+    float: left;
+    width: 100%;
+    clear: both;
+    padding-top: 10px;
+
+    p {
+      font-size: 10px;
+      font-weight: normal;
+    }
+  }
+
+  input,textarea {
+    float: left;
+    clear: both;
+    width: 100%;
+  }
+
+  section {
+    padding-top: 10px;
+    overflow: hidden;
+  }
+
+  textarea {
+    resize: none;
+  }
+}

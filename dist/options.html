@@ -3,21 +3,30 @@
 
 <head>
   <title>Habitica Options</title>
-  <style>
-    body: { padding: 10px; }
-  </style>
+  <link rel="stylesheet" href="css/styles-bundle.css" type="text/css"></link>
 </head>
 
-<body>
-  <label>Habitica User ID:</label>
-  <input id="user_id_txt" type="text"/>
+<body class="options-page">
+    <p>Add your Habitica User ID and API key below to connect your account.</p>
 
-  <br/>
+  <section>
+    <label>Habitica User ID</label>
+    <input id="user_id_txt" type="text"/>
 
-  <label>Habitica API Key:</label>
-  <input id="api_key_txt" type="password"/>
+    <label>Habitica API Key</label>
+    <input id="api_key_txt" type="password"/>
+  </section>
 
-  <div id="options_status_txt"></div>
+  <section>
+    <label>Websites to Avoid</label>
+    <p>Separate each website with a comma.</p>
+    <textarea id="site_blacklist_txt" rows="6"></textarea>
+  </section>
+
+  <section>
+    <div id="options_status_txt"></div>
+  </section>
+
   <button id="options_save_btn">Save</button>
   <button id="options_clear_btn">Clear</button>
 
