@@ -10,7 +10,7 @@ Setup
 -----
 
 1. Run `npm install`.
-2. Run `npm run build` to build the minified Chrome package.
+2. Run `npm run build` to build the minified Chrome package into the `dist` directory.
 
 
 Planned
@@ -18,9 +18,11 @@ Planned
 
 :white_check_mark: View basic user info (profile pic, health, experience, etc.)
 
-:white_large_square: Earn gold and experience for spending time on productive websites (whitelist).
+:white_check_mark: Blacklisted websites are detected by the extension using a list provided by the user.
 
-:white_large_square: Spend gold to earn free time to access distracting websites (blacklist). One generic purchase for free time (example: 15 minutes free time for 25 gold).
+:white_large_square: Spend gold to earn free time to access distracting websites (on the blacklist). One generic purchase for free time (example: 15 minutes free time for 25 gold).
+
+:white_large_square: Earn gold and experience for spending time on productive websites (whitelist).
 
 :white_large_square: Schedule active times for both blacklist and whitelist (i.e. not on the weekends).
 

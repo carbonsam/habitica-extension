@@ -1,15 +1,9 @@
 {
-  "presets": [
-    ["es2015", { "modules": false }]
-  ],
+  "presets": ["env"],
   "plugins": [
-    ["babel-plugin-root-import", {"rootPathSuffix": "src"}]
-  ],
-  "env": {
-    "test": {
-      "presets": [
-        "es2015"
-      ]
-    }
-  }
+    ["transform-runtime", {
+      "polyfill": false,
+      "regenerator": true
+    }]
+  ]
 }
