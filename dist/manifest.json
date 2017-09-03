@@ -3,7 +3,7 @@
 
   "name": "Habitica",
   "description": "This  is the un-official Habitica browser extension",
-  "version": "0.2.0",
+  "version": "0.2.1",
 
   "browser_action": {
     "default_title": "Habitica",
@@ -11,7 +11,8 @@
     "default_popup": "popup.html"
   },
   "background": {
-    "scripts": ["js/background-bundle.js"]
+    "scripts": ["js/background-bundle.js"],
+    "persistant": false
   },
   "icons": {
     "19": "img/icon19.png",

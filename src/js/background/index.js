@@ -26,17 +26,10 @@ async function isSiteInBlacklist(url) {
   return response;
 }
 
-function handleBlacklistedSite() {
-  // TODO
-}
-
 function attachEvents() {
   chrome.webNavigation.onCommitted.addListener((event) => {
     isSiteInBlacklist(event.url).then(response => {
-      if (response) {
-        handleBlacklistedSite();
-      }
-      //console.log((response) ? 'This site is blacklisted' : 'This site is not blacklisted');
+      chrome.runtime.sendMessage({pageStatus: response});
     });
   });
 }
