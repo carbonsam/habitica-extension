@@ -1,7 +1,8 @@
 .hero-info {
   float: left;
   width: 100%;
-  background-color: #bbb;
+  color: $text_light;
+  background-color: $royal_purple;
 
   .left-panel {
     float: left;
@@ -27,8 +28,12 @@
   clear: both;
   width: 100%;
   text-align: center;
-  padding: 10px 0;
-  background-color: tan;
+  padding: 25px 0;
+  color: $text_dark;
+
+  &.pending {
+    background-color: lightblue;
+  }
 
   &.whitelisted {
     background-color: red;
@@ -39,59 +44,79 @@
   }
 }
 
-.time-info {
-  float: left;
-  clear: both;
-  width: 100%;
-  text-align: center;
-  padding: 10px 0;
-}
+.progress-container {
+  margin-left: 4px;
+  margin-bottom: .5em;
+  transition-duration: 0.15s;
+  transition-property: border-color, box-shadow, color;
+  transition-timing-function: ease-in;
 
-.action-bar {
-  width: 100%;
-  float: left;
-  clear: both;
-  padding: 10px 0;
-  text-align: center;
-  background-color: #bbb;
+  .progress {
+    display: inline-block;
+    vertical-align: bottom;
+    min-width: 100px;
+    margin: 0px;
+    border-radius: 2px;
+    height: 12px;
+    background-color: $progress_bar_back;
+    overflow: hidden;
 
-  ul.links {
-    list-style: none;
-    width: 100%;
-    padding: 10px 0;
+    .progress-bar {
+      border-radius: 2px;
+      height: 12px;
+      min-width: 0px;
+      transition: width .6s ease;
+      color: $text_light;
 
-    li {
-      display: inline-block;
-    }
-
-    li:first-child {
-      float: left;
-    }
-
-    li:last-child {
-      float: right;
+      &.bg-health {
+        background-color: $progress_bar_health_front;
+      }
+  
+      &.bg-experience {
+        background-color: $progress_bar_experience_front;
+      }
+  
+      &.bg-mana {
+        background-color: $progress_bar_mana_front;
+      }
     }
   }
 
-  button {
-    width: 100%;
+  span {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-left: 8px;
+    line-height: 1;
+    font-size: 12px;
+    color: $text_accent;
+  }
+
+  .svg-icon {
+    width: 24px;
     height: 24px;
+    margin-right: 8px;
+    padding-top: 6px;
+    display: inline-block;
+    vertical-align: bottom;
   }
 }
 
-progress {
-  -webkit-appearance: none;
-  appearance: none;
-  border: none;
-
-  width: 100%;
-  height: 24px;
-
-  &.health::-webkit-progress-value {
-    background-color: #da5353;
+.gold-container {
+  .svg-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    padding-top: 6px;
+    display: inline-block;
+    vertical-align: bottom;
   }
 
-  &.experience::-webkit-progress-value {
-    background-color: #ffcc35;
+  span {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-left: 8px;
+    line-height: 1;
+    font-size: 12px;
+    color: $text_accent;
   }
 }

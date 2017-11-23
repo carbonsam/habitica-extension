@@ -1,8 +1,20 @@
-@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+// Colors
+$royal_purple: #432874;
+
+$text_light: #FFFFFF;
+$text_accent: #D5C8FF;
+$text_dark: #34313A;
+
+$progress_bar_back: #271B3D;
+$progress_bar_health_front: #F74E52;
+$progress_bar_experience_front: #FFBE5D;
+$progress_bar_mana_front: #50B5E9;
 
 body {
   font-size: 16px;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', sans-serif;
   padding: 0;
   margin: 0;
 }

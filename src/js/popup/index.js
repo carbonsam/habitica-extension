@@ -36,6 +36,7 @@ const updatePopup = (userData) => {
     gold_value: document.getElementById('hero_gold_txt')
   };
   const statusElements = {
+    wrapper: document.getElementById('status'),
     text: document.getElementById('status_text')
   };
 
@@ -45,13 +46,13 @@ const updatePopup = (userData) => {
   getUserId(updateAvatar);
 
   const updateHealth = (currentHealth, maxHealth) => {
-    userElements.health_bar.value = currentHealth;
+    userElements.health_bar.style = `width: ${currentHealth / maxHealth * 100}%`;
     userElements.health_value.innerHTML = `${Math.round(currentHealth)} / ${maxHealth}`;
   };
 
   const updateExperience = (currentExp, maxExp) => {
     userElements.exp_bar.max = maxExp;
-    userElements.exp_bar.value = currentExp;
+    userElements.exp_bar.style = `width: ${currentExp / maxExp * 100}%`;
     userElements.exp_value.innerHTML = `${currentExp} / ${maxExp}`;
   };
 
@@ -66,13 +67,19 @@ const updatePopup = (userData) => {
   }
 
   if (appData) {
-    statusElements.text.innerHTML = (appData.pageStatus === true)
-      ? 'You are on a distracting website!'
-      : 'You are on a productive website!';
+    if (appData.pageStatus === true) {
+      statusElements.text.innerHTML = 'You are on a distracting website!';
+      statusElements.wrapper.classList.remove('pending');
+      statusElements.wrapper.classList.add('blacklisted');
+    } else {
+      statusElements.text.innerHTML = 'You are on a productive website!';
+      statusElements.wrapper.classList.remove('pending');
+      statusElements.wrapper.classList.add('whitelisted');
+    }
   }
 };
 
-chrome.runtime.onMessage.addListener((request, sender) => {
+chrome.runtime.onMessage.addListener((request) => {
   if (request.pageStatus) {
     appData.pageStatus = request.pageStatus;
     updatePopup();
