@@ -1,6 +1,4 @@
-/*global
-chrome
-*/
+/* global chrome */
 
 function getSavedBlacklist() {
   return new Promise(resolve => {
@@ -23,6 +21,7 @@ async function isSiteInBlacklist(url) {
       break;
     }
   }
+
   return response;
 }
 

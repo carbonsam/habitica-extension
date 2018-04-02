@@ -1,6 +1,4 @@
-/*global
-chrome
-*/
+/* global chrome */
 
 import makeApiRequest from '~/util/makeApiRequest';
 
@@ -67,7 +65,7 @@ const updatePopup = (userData) => {
   }
 
   if (appData) {
-    if (appData.pageStatus === true) {
+    if (appData.pageStatus === 'blocked') {
       statusElements.text.innerHTML = 'You are on a distracting website!';
       statusElements.wrapper.classList.remove('pending');
       statusElements.wrapper.classList.add('blacklisted');
@@ -81,7 +79,7 @@ const updatePopup = (userData) => {
 
 chrome.runtime.onMessage.addListener((request) => {
   if (request.pageStatus) {
-    appData.pageStatus = request.pageStatus;
+    appData.pageStatus = (request.pageStatus) ? 'blocked' : 'allowed';
     updatePopup();
   }
   return true;

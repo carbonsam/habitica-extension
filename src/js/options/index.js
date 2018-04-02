@@ -1,6 +1,4 @@
-/*global
-chrome
-*/
+/* global chrome */
 
 const USER_ID_ELEMENT = document.getElementById('user_id_txt');
 const API_KEY_ELEMENT = document.getElementById('api_key_txt');

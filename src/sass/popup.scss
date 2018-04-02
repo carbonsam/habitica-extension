@@ -36,11 +36,11 @@
   }
 
   &.whitelisted {
-    background-color: red;
+    background-color: $good;
   }
 
   &.blacklisted {
-    background-color: green;
+    background-color: $bad;
   }
 }
 
